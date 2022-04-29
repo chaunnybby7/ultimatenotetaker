@@ -26,3 +26,5 @@ app.use('/', htmlRoute);
 app.listen(PORT, () => {
     console.log(`API server is ready on port ${PORT}! 🚀`);
 });
+
+module.exports = server;
