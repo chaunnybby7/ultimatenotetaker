@@ -11,15 +11,15 @@ router.get('/notes', function (req, res) {
     .catch(err => res.status(500).json(err));
 });
 //POST request
-router.post('/notes,' (req, res) => {
+router.post('/notes', (req, res) => {
     savedNotes
         .addNote(req.body)
-        .then(note) => res.json(note))
-        .then(note) => res.json(500).json(err));
+        .then((note) => res.json(note))
+        .catch(err => res.status(500).json(err));
 });
 
 //bonus - DELETE
-router.delete('/notes/:id'), function (req, res) {
+router.delete('/notes/:id', function (req, res) {
     savedNotes
     .deleteNote(req.params.id)
     .then(() => res.json({ ok: true}))
